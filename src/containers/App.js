@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CardList from '../components/CardList';
 import Scroll from '../components/Scroll';
+import ErrorBountry from '../components/ErrorBountry';
 import SearchBox from '../components/SearchBox';
 import './App.css';
 
@@ -34,7 +35,9 @@ onSearchChange = (event)=>{
                 <h1 className="f1">RoboFriends</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <Scroll>
+                <ErrorBountry>
                 <CardList robot={filteredRobots}/>
+                </ErrorBountry>
                 </Scroll>
             
             </div>
